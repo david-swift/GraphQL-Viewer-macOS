@@ -69,7 +69,7 @@ extension FieldDefinition: DefinitionProtocol, Child {
         code.append("""
         
             /// The fields.
-            public var fields: \(typeReference.reference.type).Fields
+            public var fields: \(typeReference.reference.swiftType).Fields
         
         }
         """)

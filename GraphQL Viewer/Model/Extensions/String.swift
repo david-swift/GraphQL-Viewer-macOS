@@ -52,4 +52,15 @@ extension String {
         return false
     }
 
+    func getTypeName(category: Definition? = nil) -> String {
+        let firstLetter = String(prefix(1)).uppercased()
+        var otherLetters = dropFirst()
+        if category == .queryDefinitions {
+            otherLetters += "Query"
+        } else if category == .mutationDefinitions {
+            otherLetters += "Mutation"
+        }
+        return firstLetter + otherLetters
+    }
+
 }

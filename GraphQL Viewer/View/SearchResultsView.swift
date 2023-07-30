@@ -13,8 +13,7 @@ import SwiftUI
 struct SearchResultsView: View {
 
     /// The view model.
-    @Environment(ViewModel.self)
-    var viewModel
+    @EnvironmentObject var viewModel: ViewModel
     /// The document.
     var document: GraphQLDocument
 
@@ -32,10 +31,15 @@ struct SearchResultsView: View {
     /// The view's body.
     var body: some View {
         if filteredContent.isEmpty {
-            ContentUnavailableView(String(localized: .init(
+            let text = LocalizedStringResource(
                 "No Search Results",
                 comment: "SearchResultsView (No search results title)"
-            )), systemImage: SFSymbol.magnifyingglass.rawValue)
+            )
+            if #available(macOS 14.0, *) {
+                ContentUnavailableView(String(localized: text), systemImage: SFSymbol.magnifyingglass.rawValue)
+            } else {
+                Text(text)
+            }
             if viewModel.searchScope != nil {
                 Button(.init("Remove Type Filter", comment: "SearchResultsView (No search result tip)")) {
                     viewModel.searchScope = nil

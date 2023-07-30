@@ -72,7 +72,7 @@ extension ObjectTypeDefinition: DefinitionProtocol {
                     wrappersDefinition.append("@Arguments([")
                     for argument in arguments {
                         wrappersDefinition.append(
-                            "\"\(argument.name)\": \(argument.type?.reference.notOptionalDescription ?? "String")(), "
+                            "\"\(argument.name)\": \(argument.type?.reference.notOptionalDescription ?? "String").self, "
                         )
                     }
                     let commaSpaceCount = 2; wrappersDefinition.removeLast(commaSpaceCount)

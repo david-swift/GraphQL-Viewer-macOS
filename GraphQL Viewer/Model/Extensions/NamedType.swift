@@ -16,7 +16,7 @@ extension NamedType: TypeReferenceProtocol {
     }
     /// The Swift type name of the content without a questionmark or brackets.
     var swiftType: String {
-        getString { $0.swift }
+        getString { $0.swift }.getTypeName()
     }
     /// The type's description, but not optional.
     var notOptionalDescription: String {
@@ -42,7 +42,7 @@ extension NamedType: TypeReferenceProtocol {
     /// - Parameter color: The type' accent color.
     /// - Returns: The text view.
     func text(color: Color) -> Text {
-        .init(type) + .init("?").foregroundStyle(color)
+        .init(type) + .init("?").foregroundColor(color)
     }
     /// Get a SwiftUI text view, but not optional.
     /// - Parameter color: The type' accent color.

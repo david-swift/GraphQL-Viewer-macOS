@@ -21,17 +21,22 @@ struct DetailView: View {
         if let value = navigation.last {
             ItemView(selection: value, document: document)
         } else {
-            ContentUnavailableView(
-                String(localized: .init(
-                    "No Selection",
-                    comment: "DetailView (No selection title)"
-                )),
-                systemImage: SFSymbol.menucard.rawValue,
-                description: .init(.init(
-                    "Select a definition in the sidebar.",
-                    comment: "DetailView (No selection description)"
-                ))
+            let text = LocalizedStringResource(
+                "No Selection",
+                comment: "DetailView (No selection title)"
             )
+            if #available(macOS 14.0, *) {
+                ContentUnavailableView(
+                    String(localized: text),
+                    systemImage: SFSymbol.menucard.rawValue,
+                    description: .init(.init(
+                        "Select a definition in the sidebar.",
+                        comment: "DetailView (No selection description)"
+                    ))
+                )
+            } else {
+                Text(text)
+            }
         }
     }
 }

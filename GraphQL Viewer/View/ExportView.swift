@@ -11,8 +11,7 @@ import SwiftUI
 struct ExportView: View {
 
     /// The view model.
-    @Environment(ViewModel.self)
-    var viewModel
+    @EnvironmentObject var viewModel: ViewModel
     /// Whether the file sheet is displayed.
     @State private var export = false
     /// The document.
@@ -23,7 +22,6 @@ struct ExportView: View {
 
     /// The view's body.
     var body: some View {
-        @Bindable var viewModel = viewModel
         Form {
             TextField(.init("Package Name", comment: "ExportView (Package name)"), text: $viewModel.packageName)
             TextField(.init("Creator Name", comment: "ExportView (Creator name)"), text: $viewModel.creatorName)

@@ -14,24 +14,14 @@ struct ContentView: View {
     /// The selected document.
     var document: GraphQLDocument
     /// The view model.
-    @State var viewModel = ViewModel()
+    @StateObject private var viewModel = ViewModel()
 
     /// The view's body.
     var body: some View {
-        NavigationSplitView(columnVisibility: .init {
-            viewModel.isPresented ? .detailOnly : .all
-        } set: { newValue in
-            withAnimation {
-                if newValue == .detailOnly {
-                    viewModel.isPresented = true
-                } else {
-                    viewModel.isPresented = false
-                }
-            }
-        }) {
-            SidebarView(viewModel: viewModel, document: document)
+        NavigationSplitView {
+            SidebarView(document: document)
         } detail: {
-            if viewModel.isPresented {
+            if !viewModel.search.isEmpty {
                 SearchResultsView(document: document)
             } else {
                 DetailView(navigation: $viewModel.navigation, document: document)
@@ -40,7 +30,7 @@ struct ContentView: View {
         .toolbar(id: "detail") {
             GraphQLViewerToolbar(document: document)
         }
-        .searchable(text: $viewModel.search, isPresented: $viewModel.isPresented.animation())
+        .searchable(text: $viewModel.search)
         .searchScopes($viewModel.searchScope) {
             Text(.init("All", comment: "ContentView (All search scope)"))
                 .tag(nil as Definition?)
@@ -52,11 +42,8 @@ struct ContentView: View {
         .sheet(isPresented: $viewModel.export) {
             ExportView(document: document)
         }
-        .environment(viewModel)
+        .environmentObject(viewModel)
         .markdownTheme(.docC)
-        .onChange(of: viewModel.navigation) { _, _ in
-            viewModel.isPresented = false
-        }
         .focusedValue(\.document, document)
         .focusedObject(viewModel)
     }
@@ -65,5 +52,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView(document: .init())
-        .environment(AppModel())
+        .environmentObject(AppModel())
 }

@@ -27,14 +27,7 @@ extension GraphQLDocument {
         let contentURL = url.appending(component: category.name.key.filter { !$0.isWhitespace })
         try fileManager.createDirectory(at: contentURL, withIntermediateDirectories: true)
         for definition in category.getDefinitions(definitions: document.definitions) {
-            let firstLetter = String(definition.name.prefix(1)).uppercased()
-            var otherLetters = definition.name.dropFirst()
-            if category == .queryDefinitions {
-                otherLetters += "Query"
-            } else if category == .mutationDefinitions {
-                otherLetters += "Mutation"
-            }
-            let name = firstLetter + otherLetters
+            let name = definition.name.getTypeName(category: category)
             let enums = Definition.enumTypeDefinitions
                 .getDefinitions(definitions: document.definitions)
                 .map { $0.name }
@@ -209,7 +202,7 @@ extension GraphQLDocument {
                 )
             ],
             dependencies: [
-                .package(url: "https://github.com/david-swift/GraphQLKit-macOS", from: "0.1.4"),
+                .package(url: "https://github.com/david-swift/GraphQLKit", from: "0.1.7"),
                 .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", from: "5.0.0"),
                 .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.52.3")
             ],
@@ -217,7 +210,7 @@ extension GraphQLDocument {
                 .target(
                     name: "\(packageName)",
                     dependencies: [
-                        .product(name: "GraphQLKit", package: "GraphQLKit-macOS"),
+                        .product(name: "GraphQLKit", package: "GraphQLKit"),
                         .product(name: "SwiftyJSON", package: "SwiftyJSON")
                     ],
                     plugins: [

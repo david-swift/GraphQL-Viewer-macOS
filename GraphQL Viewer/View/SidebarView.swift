@@ -11,7 +11,7 @@ import SwiftUI
 struct SidebarView: View {
 
     /// The view model.
-    @Bindable var viewModel: ViewModel
+    @EnvironmentObject var viewModel: ViewModel
     /// The document.
     var document: GraphQLDocument
 

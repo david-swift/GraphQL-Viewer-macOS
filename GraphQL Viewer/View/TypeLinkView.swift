@@ -12,8 +12,7 @@ import SwiftUI
 struct TypeLinkView: View {
 
     /// The view model.
-    @Environment(ViewModel.self)
-    var viewModel
+    @EnvironmentObject var viewModel: ViewModel
     /// Whether the link view is hovered.
     @State private var hover = false
     /// The document.

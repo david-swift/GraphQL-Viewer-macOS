@@ -14,8 +14,7 @@ import SwiftUI
 struct ItemView: View {
 
     /// The view model.
-    @Environment(ViewModel.self)
-    var viewModel
+    @EnvironmentObject var viewModel: ViewModel
     /// The selected definition.
     var selection: String
     /// The document.
@@ -60,17 +59,22 @@ struct ItemView: View {
             }
             .id(selection)
         } else {
-            ContentUnavailableView(
-                String(localized: .init(
-                    "Type Not Found",
-                    comment: "ItemView (Type not found comment)"
-                )),
-                systemImage: SFSymbol.questionmarkCircle.rawValue,
-                description: .init(.init(
-                    "The type definition for \"\(selection)\" could not be found.",
-                    comment: "ItemView (Type not found description)"
-                ))
+            let text = LocalizedStringResource(
+                "Type Not Found",
+                comment: "ItemView (Type not found comment)"
             )
+            if #available(macOS 14.0, *) {
+                ContentUnavailableView(
+                    String(localized: text),
+                    systemImage: SFSymbol.questionmarkCircle.rawValue,
+                    description: .init(.init(
+                        "The type definition for \"\(selection)\" could not be found.",
+                        comment: "ItemView (Type not found description)"
+                    ))
+                )
+            } else {
+                Text(text)
+            }
         }
     }
 

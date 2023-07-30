@@ -11,8 +11,7 @@ import SwiftUI
 struct GraphQLViewerToolbar: CustomizableToolbarContent {
 
     /// The model of the active window.
-    @Environment(ViewModel.self)
-    var viewModel
+    @EnvironmentObject var viewModel: ViewModel
     /// The selected document.
     var document: GraphQLDocument
 

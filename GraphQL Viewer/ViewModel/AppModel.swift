@@ -7,18 +7,16 @@
 
 import ColibriComponents
 import Foundation
-import Observation
 import PigeonApp
 import SwiftUI
 
 /// The model that stores data that affects all of the windows.
-@Observable
-final class AppModel {
+class AppModel: ObservableObject {
 
     /// A shared instance of ``AppModel``.
     static var shared = AppModel()
     /// A list of all of the contributors.
-    var contributors: [(String, URL)] = []
+    @Published var contributors: [(String, URL)] = []
 
     /// Important links.
     let links: [(LocalizedStringResource, URL)] = [
@@ -39,6 +37,15 @@ final class AppModel {
     // swiftlint:disable no_magic_numbers
     /// The app's versions.
     @ArrayBuilder<Version> var versions: [Version] {
+        Version("0.1.1", date: .init(timeIntervalSince1970: 1_690_694_644)) {
+            Version.Feature(.init(
+                "Support for macOS 13",
+                comment: "AppModel (Feature in version 0.1.1)"
+            ), description: .init(
+                "The app now supports macOS 13 or later.",
+                comment: "AppModel (Description of feature in version 0.1.1)"
+            ), icon: .laptopcomputer)
+        }
         Version("0.1.0", date: .init(timeIntervalSince1970: 1_688_226_031)) {
             Version.Feature(.init(
                 "Initial Release",

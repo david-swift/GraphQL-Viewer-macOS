@@ -23,7 +23,7 @@ struct GraphQLViewerApp: App {
             document: GraphQLDocument()
         ) { $document, _, _, _ in
             ContentView(document: document)
-                .environment(appModel)
+                .environmentObject(appModel)
         }
         .information(description: .init(localized: .init(
             "A macOS app for viewing GraphQL schemas and generating GraphQL Swift packages.",

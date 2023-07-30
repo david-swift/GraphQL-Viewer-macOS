@@ -9,11 +9,10 @@ import Foundation
 import Observation
 
 /// The model showing the active window's state.
-@Observable
 class ViewModel: ObservableObject {
 
     /// The navigation information.
-    var navigation: [String] = []
+    @Published var navigation: [String] = []
     /// The selected definition.
     var selection: String? {
         get {
@@ -23,29 +22,26 @@ class ViewModel: ObservableObject {
             if let newValue, newValue != navigation.last {
                 navigation.append(newValue)
             }
-            isPresented = false
         }
     }
     /// The filter string.
-    var search = ""
+    @Published var search = ""
     // swiftlint:disable redundant_optional_initialization
     /// The search scope.
-    var searchScope: Definition? = nil
+    @Published var searchScope: Definition? = nil
     // swiftlint:enable redundant_optional_initialization
-    /// Whether the search is active.
-    var isPresented = false
     /// Whether the export sheet is visible.
-    var export = false
+    @Published var export = false
     /// The active package name in the export sheet.
-    var packageName = "Package"
+    @Published var packageName = "Package"
     /// The active creator name in the export sheet.
-    var creatorName = "david-swift"
+    @Published var creatorName = "david-swift"
     /// The link to the creator's GitHub account in the export sheet.
-    var creatorGitHub = "https://github.com/david-swift"
+    @Published var creatorGitHub = "https://github.com/david-swift"
     /// The link to the GitHub repo in the export sheet.
-    var repositoryGitHub = "https://github.com/david-swift/GraphQL-Viewer-macOS"
+    @Published var repositoryGitHub = "https://github.com/david-swift/GraphQL-Viewer-macOS"
     /// The scalars and the associated Swift types.
-    var scalars: [(String, SwiftType)] = []
+    @Published var scalars: [(String, SwiftType)] = []
 
     /// Navigate back.
     func back() {

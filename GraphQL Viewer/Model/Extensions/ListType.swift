@@ -35,15 +35,15 @@ extension ListType: TypeReferenceProtocol {
     /// - Parameter color: The type' accent color.
     /// - Returns: The text view.
     func text(color: Color) -> Text {
-        notOptionalText(color: color) + .init("?").foregroundStyle(color)
+        notOptionalText(color: color) + .init("?").foregroundColor(color)
     }
     /// Get a SwiftUI text view, but not optional.
     /// - Parameter color: The type' accent color.
     /// - Returns: The text view.
     func notOptionalText(color: Color) -> Text {
-        .init("[").foregroundStyle(color)
+        .init("[").foregroundColor(color)
         + (child?.text(color: color) ?? .init("String"))
-        + .init("]").foregroundStyle(color)
+        + .init("]").foregroundColor(color)
     }
 
 }
