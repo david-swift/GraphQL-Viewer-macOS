@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D1450132A43FB210097DBA1 /* DefaultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1450122A43FB210097DBA1 /* DefaultType.swift */; };
+		8D2C58D32A36D5090007698D /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58D22A36D5090007698D /* Definition.swift */; };
+		8D2C58D52A36D8150007698D /* DefinitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58D42A36D8150007698D /* DefinitionProtocol.swift */; };
+		8D2C58D82A36E45B0007698D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58D72A36E45B0007698D /* String.swift */; };
+		8D2C58DA2A36E4B30007698D /* ObjectTypeDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58D92A36E4B30007698D /* ObjectTypeDefinition.swift */; };
+		8D2C58DC2A36E4C40007698D /* InterfaceTypeDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58DB2A36E4C40007698D /* InterfaceTypeDefinition.swift */; };
+		8D2C58DE2A36E4D80007698D /* DirectiveDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58DD2A36E4D80007698D /* DirectiveDefinition.swift */; };
+		8D2C58E02A36E4EC0007698D /* InputObjectTypeDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58DF2A36E4EC0007698D /* InputObjectTypeDefinition.swift */; };
+		8D2C58E22A36E4FF0007698D /* EnumTypeDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58E12A36E4FF0007698D /* EnumTypeDefinition.swift */; };
+		8D2C58E42A36E50E0007698D /* ScalarTypeDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58E32A36E50E0007698D /* ScalarTypeDefinition.swift */; };
+		8D2C58E62A36E51C0007698D /* FieldDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C58E52A36E51C0007698D /* FieldDefinition.swift */; };
+		8D327CDF2A4868EE001BA3CC /* GraphQLLanguage-Auto in Frameworks */ = {isa = PBXBuildFile; productRef = 8D327CDE2A4868EE001BA3CC /* GraphQLLanguage-Auto */; };
+		8D327CE22A486901001BA3CC /* PigeonApp in Frameworks */ = {isa = PBXBuildFile; productRef = 8D327CE12A486901001BA3CC /* PigeonApp */; };
+		8D37B69D2A45EB100044102B /* ChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37B69C2A45EB100044102B /* ChildrenView.swift */; };
+		8D37B69F2A45EB890044102B /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37B69E2A45EB890044102B /* Child.swift */; };
+		8D37B6A12A45F25A0044102B /* InputValueDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37B6A02A45F25A0044102B /* InputValueDefinition.swift */; };
+		8D3ED6FC2A3CC16600BC2DD9 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3ED6FB2A3CC16600BC2DD9 /* ItemView.swift */; };
+		8D4E8D002A381D86002857BD /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4E8CFF2A381D86002857BD /* SidebarView.swift */; };
+		8D4E8D022A381FE1002857BD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4E8D012A381FE1002857BD /* DetailView.swift */; };
+		8D5BC3C32A4B3229006BD2CB /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 8D5BC3C22A4B3229006BD2CB /* Icons */; };
+		8D5BC3C72A4CA95A006BD2CB /* TypeReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BC3C62A4CA95A006BD2CB /* TypeReference.swift */; };
+		8D5BC3C92A4CAF9B006BD2CB /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BC3C82A4CAF9B006BD2CB /* Optional.swift */; };
+		8D62AEFF2A40D2D000DF980C /* ValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AEFE2A40D2D000DF980C /* ValueProtocol.swift */; };
+		8D62AF012A40D3AC00DF980C /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF002A40D3AC00DF980C /* Variable.swift */; };
+		8D62AF032A40D3B900DF980C /* IntValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF022A40D3B900DF980C /* IntValue.swift */; };
+		8D62AF052A40D3C700DF980C /* FloatValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF042A40D3C700DF980C /* FloatValue.swift */; };
+		8D62AF072A40D3CF00DF980C /* BooleanValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF062A40D3CF00DF980C /* BooleanValue.swift */; };
+		8D62AF092A40D3D600DF980C /* StringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF082A40D3D600DF980C /* StringValue.swift */; };
+		8D62AF0B2A40D3DD00DF980C /* NullValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF0A2A40D3DD00DF980C /* NullValue.swift */; };
+		8D62AF0D2A40D3E400DF980C /* EnumValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF0C2A40D3E400DF980C /* EnumValue.swift */; };
+		8D62AF0F2A40D3E800DF980C /* ListValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF0E2A40D3E800DF980C /* ListValue.swift */; };
+		8D62AF112A40D3EE00DF980C /* ObjectValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF102A40D3EE00DF980C /* ObjectValue.swift */; };
+		8D62AF132A40E7BF00DF980C /* DirectivesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF122A40E7BF00DF980C /* DirectivesView.swift */; };
+		8D62AF152A415ABB00DF980C /* TypeReferenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF142A415ABB00DF980C /* TypeReferenceProtocol.swift */; };
+		8D62AF172A415AE000DF980C /* NamedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF162A415AE000DF980C /* NamedType.swift */; };
+		8D62AF192A415AEB00DF980C /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF182A415AEB00DF980C /* ListType.swift */; };
+		8D62AF1B2A415AF000DF980C /* NonNullType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62AF1A2A415AF000DF980C /* NonNullType.swift */; };
+		8D7517582A46A89D004DAED7 /* ExecutableDirectiveLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7517572A46A89D004DAED7 /* ExecutableDirectiveLocation.swift */; };
+		8D75175A2A46A8DD004DAED7 /* TypeSystemDirectiveLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7517592A46A8DD004DAED7 /* TypeSystemDirectiveLocation.swift */; };
+		8D75175C2A46B7D5004DAED7 /* EnumValueDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75175B2A46B7D5004DAED7 /* EnumValueDefinition.swift */; };
+		8D75175F2A46C008004DAED7 /* UnionTypeDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75175E2A46C008004DAED7 /* UnionTypeDefinition.swift */; };
+		8D84F1282A49480C00BD14D5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D84F1272A49480C00BD14D5 /* README.md */; };
+		8D84F12A2A49481300BD14D5 /* Contributors.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D84F1292A49481300BD14D5 /* Contributors.md */; };
+		8D84F12C2A49481B00BD14D5 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D84F12B2A49481B00BD14D5 /* LICENSE.md */; };
+		8D84F1372A494B7100BD14D5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8D84F1362A494B7100BD14D5 /* .gitignore */; };
+		8D84F1392A494B7900BD14D5 /* .github in Resources */ = {isa = PBXBuildFile; fileRef = 8D84F1382A494B7900BD14D5 /* .github */; };
+		8D87E3362A4E072300130370 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87E3352A4E072300130370 /* ExportView.swift */; };
+		8D87E3382A4E0B1D00130370 /* SwiftType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87E3372A4E0B1D00130370 /* SwiftType.swift */; };
+		8D95D85B2A35CB62002E2A5B /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D95D85A2A35CB62002E2A5B /* CONTRIBUTING.md */; };
+		8D95D8612A35CB7C002E2A5B /* SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D95D8602A35CB7C002E2A5B /* SUMMARY.md */; };
+		8D95D8632A35CCDB002E2A5B /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95D8622A35CCDB002E2A5B /* AppModel.swift */; };
+		8D95D8662A35CDFB002E2A5B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95D8652A35CDFB002E2A5B /* ViewModel.swift */; };
+		8D95D8692A35F0C2002E2A5B /* GraphQLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95D8682A35F0C2002E2A5B /* GraphQLDocument.swift */; };
+		8D9E7E5D2A4954EB004CEBFA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8D9E7E5C2A4954EB004CEBFA /* .swiftlint.yml */; };
+		8D9F142C2A51636100018DD3 /* GraphQLDocument+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F142B2A51636100018DD3 /* GraphQLDocument+.swift */; };
+		8DA5F0532A48694F00682F12 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8DA5F0522A48694F00682F12 /* MarkdownUI */; };
+		8DADC1252A35C73D008A103A /* GraphQLViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DADC1242A35C73D008A103A /* GraphQLViewerApp.swift */; };
+		8DADC1272A35C73D008A103A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DADC1262A35C73D008A103A /* ContentView.swift */; };
+		8DADC1292A35C73E008A103A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DADC1282A35C73E008A103A /* Assets.xcassets */; };
+		8DADC12C2A35C73E008A103A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DADC12B2A35C73E008A103A /* Preview Assets.xcassets */; };
+		8DB463E82A5284C9009CEA84 /* GraphQLDocument++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB463E72A5284C9009CEA84 /* GraphQLDocument++.swift */; };
+		8DDBB0F12A3F332C00DD455A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBB0F02A3F332C00DD455A /* View.swift */; };
+		8DDBB0F52A3F34EB00DD455A /* TypeLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBB0F42A3F34EB00DD455A /* TypeLinkView.swift */; };
+		8DDBB0F72A3F394E00DD455A /* GraphQLViewerToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBB0F62A3F394E00DD455A /* GraphQLViewerToolbar.swift */; };
+		8DDBB0F92A3F741400DD455A /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBB0F82A3F741400DD455A /* Value.swift */; };
+		8DEF49332A5081F000889116 /* GraphQLViewerCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF49322A5081F000889116 /* GraphQLViewerCommands.swift */; };
+		8DEF49362A50844800889116 /* FocusedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF49352A50844800889116 /* FocusedValues.swift */; };
+		8DFA4C8E2A46F52600A9895E /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA4C8D2A46F52600A9895E /* SearchResultsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D1450122A43FB210097DBA1 /* DefaultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultType.swift; sourceTree = "<group>"; };
+		8D2C58D22A36D5090007698D /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		8D2C58D42A36D8150007698D /* DefinitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionProtocol.swift; sourceTree = "<group>"; };
+		8D2C58D72A36E45B0007698D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8D2C58D92A36E4B30007698D /* ObjectTypeDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTypeDefinition.swift; sourceTree = "<group>"; };
+		8D2C58DB2A36E4C40007698D /* InterfaceTypeDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceTypeDefinition.swift; sourceTree = "<group>"; };
+		8D2C58DD2A36E4D80007698D /* DirectiveDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectiveDefinition.swift; sourceTree = "<group>"; };
+		8D2C58DF2A36E4EC0007698D /* InputObjectTypeDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputObjectTypeDefinition.swift; sourceTree = "<group>"; };
+		8D2C58E12A36E4FF0007698D /* EnumTypeDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTypeDefinition.swift; sourceTree = "<group>"; };
+		8D2C58E32A36E50E0007698D /* ScalarTypeDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalarTypeDefinition.swift; sourceTree = "<group>"; };
+		8D2C58E52A36E51C0007698D /* FieldDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldDefinition.swift; sourceTree = "<group>"; };
+		8D37B69C2A45EB100044102B /* ChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenView.swift; sourceTree = "<group>"; };
+		8D37B69E2A45EB890044102B /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		8D37B6A02A45F25A0044102B /* InputValueDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValueDefinition.swift; sourceTree = "<group>"; };
+		8D3ED6FB2A3CC16600BC2DD9 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		8D4E8CFF2A381D86002857BD /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		8D4E8D012A381FE1002857BD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8D5BC3C22A4B3229006BD2CB /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = PackageTemplateFiles/Icons; sourceTree = "<group>"; };
+		8D5BC3C62A4CA95A006BD2CB /* TypeReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeReference.swift; sourceTree = "<group>"; };
+		8D5BC3C82A4CAF9B006BD2CB /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		8D62AEFE2A40D2D000DF980C /* ValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueProtocol.swift; sourceTree = "<group>"; };
+		8D62AF002A40D3AC00DF980C /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		8D62AF022A40D3B900DF980C /* IntValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntValue.swift; sourceTree = "<group>"; };
+		8D62AF042A40D3C700DF980C /* FloatValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatValue.swift; sourceTree = "<group>"; };
+		8D62AF062A40D3CF00DF980C /* BooleanValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanValue.swift; sourceTree = "<group>"; };
+		8D62AF082A40D3D600DF980C /* StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValue.swift; sourceTree = "<group>"; };
+		8D62AF0A2A40D3DD00DF980C /* NullValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullValue.swift; sourceTree = "<group>"; };
+		8D62AF0C2A40D3E400DF980C /* EnumValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumValue.swift; sourceTree = "<group>"; };
+		8D62AF0E2A40D3E800DF980C /* ListValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListValue.swift; sourceTree = "<group>"; };
+		8D62AF102A40D3EE00DF980C /* ObjectValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectValue.swift; sourceTree = "<group>"; };
+		8D62AF122A40E7BF00DF980C /* DirectivesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectivesView.swift; sourceTree = "<group>"; };
+		8D62AF142A415ABB00DF980C /* TypeReferenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeReferenceProtocol.swift; sourceTree = "<group>"; };
+		8D62AF162A415AE000DF980C /* NamedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedType.swift; sourceTree = "<group>"; };
+		8D62AF182A415AEB00DF980C /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
+		8D62AF1A2A415AF000DF980C /* NonNullType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonNullType.swift; sourceTree = "<group>"; };
+		8D7517572A46A89D004DAED7 /* ExecutableDirectiveLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutableDirectiveLocation.swift; sourceTree = "<group>"; };
+		8D7517592A46A8DD004DAED7 /* TypeSystemDirectiveLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSystemDirectiveLocation.swift; sourceTree = "<group>"; };
+		8D75175B2A46B7D5004DAED7 /* EnumValueDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumValueDefinition.swift; sourceTree = "<group>"; };
+		8D75175E2A46C008004DAED7 /* UnionTypeDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionTypeDefinition.swift; sourceTree = "<group>"; };
+		8D84F1272A49480C00BD14D5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8D84F1292A49481300BD14D5 /* Contributors.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Contributors.md; sourceTree = "<group>"; };
+		8D84F12B2A49481B00BD14D5 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		8D84F1362A494B7100BD14D5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8D84F1382A494B7900BD14D5 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
+		8D87E3352A4E072300130370 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		8D87E3372A4E0B1D00130370 /* SwiftType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftType.swift; sourceTree = "<group>"; };
+		8D95D85A2A35CB62002E2A5B /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		8D95D8602A35CB7C002E2A5B /* SUMMARY.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SUMMARY.md; sourceTree = "<group>"; };
+		8D95D8622A35CCDB002E2A5B /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		8D95D8652A35CDFB002E2A5B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8D95D8672A35EDB3002E2A5B /* GraphQL-Viewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GraphQL-Viewer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8D95D8682A35F0C2002E2A5B /* GraphQLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLDocument.swift; sourceTree = "<group>"; };
+		8D9E7E5C2A4954EB004CEBFA /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		8D9F142B2A51636100018DD3 /* GraphQLDocument+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphQLDocument+.swift"; sourceTree = "<group>"; };
+		8DADC1212A35C73D008A103A /* GraphQL Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GraphQL Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DADC1242A35C73D008A103A /* GraphQLViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLViewerApp.swift; sourceTree = "<group>"; };
+		8DADC1262A35C73D008A103A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8DADC1282A35C73E008A103A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DADC12B2A35C73E008A103A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DADC12D2A35C73E008A103A /* GraphQL_Viewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GraphQL_Viewer.entitlements; sourceTree = "<group>"; };
+		8DB463E72A5284C9009CEA84 /* GraphQLDocument++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphQLDocument++.swift"; sourceTree = "<group>"; };
+		8DDBB0F02A3F332C00DD455A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		8DDBB0F42A3F34EB00DD455A /* TypeLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeLinkView.swift; sourceTree = "<group>"; };
+		8DDBB0F62A3F394E00DD455A /* GraphQLViewerToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLViewerToolbar.swift; sourceTree = "<group>"; };
+		8DDBB0F82A3F741400DD455A /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		8DEF49322A5081F000889116 /* GraphQLViewerCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLViewerCommands.swift; sourceTree = "<group>"; };
+		8DEF49352A50844800889116 /* FocusedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedValues.swift; sourceTree = "<group>"; };
+		8DFA4C8D2A46F52600A9895E /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DADC11E2A35C73D008A103A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DA5F0532A48694F00682F12 /* MarkdownUI in Frameworks */,
+				8D327CE22A486901001BA3CC /* PigeonApp in Frameworks */,
+				8D327CDF2A4868EE001BA3CC /* GraphQLLanguage-Auto in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D2C58D62A36E4520007698D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBB0EF2A3F332600DD455A /* SwiftUI */,
+				8D2C58D72A36E45B0007698D /* String.swift */,
+				8D2C58D92A36E4B30007698D /* ObjectTypeDefinition.swift */,
+				8D2C58DB2A36E4C40007698D /* InterfaceTypeDefinition.swift */,
+				8D2C58DD2A36E4D80007698D /* DirectiveDefinition.swift */,
+				8D2C58DF2A36E4EC0007698D /* InputObjectTypeDefinition.swift */,
+				8D2C58E12A36E4FF0007698D /* EnumTypeDefinition.swift */,
+				8D2C58E32A36E50E0007698D /* ScalarTypeDefinition.swift */,
+				8D75175E2A46C008004DAED7 /* UnionTypeDefinition.swift */,
+				8D2C58E52A36E51C0007698D /* FieldDefinition.swift */,
+				8D62AF002A40D3AC00DF980C /* Variable.swift */,
+				8D62AF022A40D3B900DF980C /* IntValue.swift */,
+				8D62AF042A40D3C700DF980C /* FloatValue.swift */,
+				8D62AF062A40D3CF00DF980C /* BooleanValue.swift */,
+				8D62AF082A40D3D600DF980C /* StringValue.swift */,
+				8D62AF0A2A40D3DD00DF980C /* NullValue.swift */,
+				8D62AF0C2A40D3E400DF980C /* EnumValue.swift */,
+				8D62AF0E2A40D3E800DF980C /* ListValue.swift */,
+				8D62AF102A40D3EE00DF980C /* ObjectValue.swift */,
+				8D62AF162A415AE000DF980C /* NamedType.swift */,
+				8D62AF182A415AEB00DF980C /* ListType.swift */,
+				8D62AF1A2A415AF000DF980C /* NonNullType.swift */,
+				8D37B6A02A45F25A0044102B /* InputValueDefinition.swift */,
+				8D7517572A46A89D004DAED7 /* ExecutableDirectiveLocation.swift */,
+				8D7517592A46A8DD004DAED7 /* TypeSystemDirectiveLocation.swift */,
+				8D75175B2A46B7D5004DAED7 /* EnumValueDefinition.swift */,
+				8D5BC3C62A4CA95A006BD2CB /* TypeReference.swift */,
+				8D5BC3C82A4CAF9B006BD2CB /* Optional.swift */,
+				8D9F142B2A51636100018DD3 /* GraphQLDocument+.swift */,
+				8DB463E72A5284C9009CEA84 /* GraphQLDocument++.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8D327CDA2A4868B2001BA3CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D95D8552A35CB38002E2A5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8D95D8622A35CCDB002E2A5B /* AppModel.swift */,
+				8D95D8652A35CDFB002E2A5B /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8D95D8562A35CB3C002E2A5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D95D8682A35F0C2002E2A5B /* GraphQLDocument.swift */,
+				8D2C58D22A36D5090007698D /* Definition.swift */,
+				8D2C58D42A36D8150007698D /* DefinitionProtocol.swift */,
+				8DDBB0F82A3F741400DD455A /* Value.swift */,
+				8D62AEFE2A40D2D000DF980C /* ValueProtocol.swift */,
+				8D62AF142A415ABB00DF980C /* TypeReferenceProtocol.swift */,
+				8D1450122A43FB210097DBA1 /* DefaultType.swift */,
+				8D37B69E2A45EB890044102B /* Child.swift */,
+				8D87E3372A4E0B1D00130370 /* SwiftType.swift */,
+				8D2C58D62A36E4520007698D /* Extensions */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8D95D8572A35CB41002E2A5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DADC1262A35C73D008A103A /* ContentView.swift */,
+				8D4E8CFF2A381D86002857BD /* SidebarView.swift */,
+				8D4E8D012A381FE1002857BD /* DetailView.swift */,
+				8D3ED6FB2A3CC16600BC2DD9 /* ItemView.swift */,
+				8DDBB0F42A3F34EB00DD455A /* TypeLinkView.swift */,
+				8D62AF122A40E7BF00DF980C /* DirectivesView.swift */,
+				8D37B69C2A45EB100044102B /* ChildrenView.swift */,
+				8DFA4C8D2A46F52600A9895E /* SearchResultsView.swift */,
+				8D87E3352A4E072300130370 /* ExportView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DADC1182A35C73D008A103A = {
+			isa = PBXGroup;
+			children = (
+				8D84F1272A49480C00BD14D5 /* README.md */,
+				8D84F1292A49481300BD14D5 /* Contributors.md */,
+				8D95D85A2A35CB62002E2A5B /* CONTRIBUTING.md */,
+				8D95D8602A35CB7C002E2A5B /* SUMMARY.md */,
+				8D84F12B2A49481B00BD14D5 /* LICENSE.md */,
+				8D84F1362A494B7100BD14D5 /* .gitignore */,
+				8D9E7E5C2A4954EB004CEBFA /* .swiftlint.yml */,
+				8D5BC3C22A4B3229006BD2CB /* Icons */,
+				8D84F1382A494B7900BD14D5 /* .github */,
+				8DADC1232A35C73D008A103A /* GraphQL Viewer */,
+				8DADC1222A35C73D008A103A /* Products */,
+				8D327CDA2A4868B2001BA3CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8DADC1222A35C73D008A103A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DADC1212A35C73D008A103A /* GraphQL Viewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DADC1232A35C73D008A103A /* GraphQL Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				8D95D8672A35EDB3002E2A5B /* GraphQL-Viewer-Info.plist */,
+				8DADC1242A35C73D008A103A /* GraphQLViewerApp.swift */,
+				8DDBB0F62A3F394E00DD455A /* GraphQLViewerToolbar.swift */,
+				8DEF49322A5081F000889116 /* GraphQLViewerCommands.swift */,
+				8D95D8552A35CB38002E2A5B /* ViewModel */,
+				8D95D8562A35CB3C002E2A5B /* Model */,
+				8D95D8572A35CB41002E2A5B /* View */,
+				8DADC1282A35C73E008A103A /* Assets.xcassets */,
+				8DADC12D2A35C73E008A103A /* GraphQL_Viewer.entitlements */,
+				8DADC12A2A35C73E008A103A /* Preview Content */,
+			);
+			path = "GraphQL Viewer";
+			sourceTree = "<group>";
+		};
+		8DADC12A2A35C73E008A103A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8DADC12B2A35C73E008A103A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DDBB0EF2A3F332600DD455A /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBB0F02A3F332C00DD455A /* View.swift */,
+				8DEF49352A50844800889116 /* FocusedValues.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DADC1202A35C73D008A103A /* GraphQL Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DADC1302A35C73E008A103A /* Build configuration list for PBXNativeTarget "GraphQL Viewer" */;
+			buildPhases = (
+				8DADC11D2A35C73D008A103A /* Sources */,
+				8DADC11E2A35C73D008A103A /* Frameworks */,
+				8DADC11F2A35C73D008A103A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D87E3332A4E02D600130370 /* PBXTargetDependency */,
+			);
+			name = "GraphQL Viewer";
+			packageProductDependencies = (
+				8D327CDE2A4868EE001BA3CC /* GraphQLLanguage-Auto */,
+				8D327CE12A486901001BA3CC /* PigeonApp */,
+				8DA5F0522A48694F00682F12 /* MarkdownUI */,
+			);
+			productName = "GraphQL Viewer";
+			productReference = 8DADC1212A35C73D008A103A /* GraphQL Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DADC1192A35C73D008A103A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					8DADC1202A35C73D008A103A = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 8DADC11C2A35C73D008A103A /* Build configuration list for PBXProject "GraphQL Viewer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DADC1182A35C73D008A103A;
+			packageReferences = (
+				8D327CDD2A4868ED001BA3CC /* XCRemoteSwiftPackageReference "GraphQLLanguage" */,
+				8D327CE02A486901001BA3CC /* XCRemoteSwiftPackageReference "PigeonApp-macOS" */,
+				8DA5F0512A48694F00682F12 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				8D87E3312A4E028300130370 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */,
+			);
+			productRefGroup = 8DADC1222A35C73D008A103A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DADC1202A35C73D008A103A /* GraphQL Viewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DADC11F2A35C73D008A103A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5BC3C32A4B3229006BD2CB /* Icons in Resources */,
+				8D9E7E5D2A4954EB004CEBFA /* .swiftlint.yml in Resources */,
+				8D84F1372A494B7100BD14D5 /* .gitignore in Resources */,
+				8D84F12A2A49481300BD14D5 /* Contributors.md in Resources */,
+				8DADC12C2A35C73E008A103A /* Preview Assets.xcassets in Resources */,
+				8D95D8612A35CB7C002E2A5B /* SUMMARY.md in Resources */,
+				8D84F1282A49480C00BD14D5 /* README.md in Resources */,
+				8D95D85B2A35CB62002E2A5B /* CONTRIBUTING.md in Resources */,
+				8D84F1392A494B7900BD14D5 /* .github in Resources */,
+				8DADC1292A35C73E008A103A /* Assets.xcassets in Resources */,
+				8D84F12C2A49481B00BD14D5 /* LICENSE.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DADC11D2A35C73D008A103A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D62AF132A40E7BF00DF980C /* DirectivesView.swift in Sources */,
+				8D62AF112A40D3EE00DF980C /* ObjectValue.swift in Sources */,
+				8DDBB0F52A3F34EB00DD455A /* TypeLinkView.swift in Sources */,
+				8DADC1272A35C73D008A103A /* ContentView.swift in Sources */,
+				8D4E8D002A381D86002857BD /* SidebarView.swift in Sources */,
+				8D4E8D022A381FE1002857BD /* DetailView.swift in Sources */,
+				8D62AF092A40D3D600DF980C /* StringValue.swift in Sources */,
+				8D2C58D52A36D8150007698D /* DefinitionProtocol.swift in Sources */,
+				8D2C58DA2A36E4B30007698D /* ObjectTypeDefinition.swift in Sources */,
+				8D95D8632A35CCDB002E2A5B /* AppModel.swift in Sources */,
+				8D75175F2A46C008004DAED7 /* UnionTypeDefinition.swift in Sources */,
+				8D5BC3C72A4CA95A006BD2CB /* TypeReference.swift in Sources */,
+				8D62AF012A40D3AC00DF980C /* Variable.swift in Sources */,
+				8DEF49332A5081F000889116 /* GraphQLViewerCommands.swift in Sources */,
+				8D62AF0F2A40D3E800DF980C /* ListValue.swift in Sources */,
+				8DFA4C8E2A46F52600A9895E /* SearchResultsView.swift in Sources */,
+				8D37B69F2A45EB890044102B /* Child.swift in Sources */,
+				8D62AEFF2A40D2D000DF980C /* ValueProtocol.swift in Sources */,
+				8DDBB0F12A3F332C00DD455A /* View.swift in Sources */,
+				8DEF49362A50844800889116 /* FocusedValues.swift in Sources */,
+				8D62AF032A40D3B900DF980C /* IntValue.swift in Sources */,
+				8D37B69D2A45EB100044102B /* ChildrenView.swift in Sources */,
+				8D62AF192A415AEB00DF980C /* ListType.swift in Sources */,
+				8D2C58E02A36E4EC0007698D /* InputObjectTypeDefinition.swift in Sources */,
+				8DB463E82A5284C9009CEA84 /* GraphQLDocument++.swift in Sources */,
+				8D2C58DC2A36E4C40007698D /* InterfaceTypeDefinition.swift in Sources */,
+				8D7517582A46A89D004DAED7 /* ExecutableDirectiveLocation.swift in Sources */,
+				8D95D8662A35CDFB002E2A5B /* ViewModel.swift in Sources */,
+				8D62AF052A40D3C700DF980C /* FloatValue.swift in Sources */,
+				8D2C58E22A36E4FF0007698D /* EnumTypeDefinition.swift in Sources */,
+				8D37B6A12A45F25A0044102B /* InputValueDefinition.swift in Sources */,
+				8D62AF172A415AE000DF980C /* NamedType.swift in Sources */,
+				8D95D8692A35F0C2002E2A5B /* GraphQLDocument.swift in Sources */,
+				8D75175C2A46B7D5004DAED7 /* EnumValueDefinition.swift in Sources */,
+				8D1450132A43FB210097DBA1 /* DefaultType.swift in Sources */,
+				8DDBB0F92A3F741400DD455A /* Value.swift in Sources */,
+				8D2C58D32A36D5090007698D /* Definition.swift in Sources */,
+				8D62AF0D2A40D3E400DF980C /* EnumValue.swift in Sources */,
+				8D2C58E42A36E50E0007698D /* ScalarTypeDefinition.swift in Sources */,
+				8D62AF072A40D3CF00DF980C /* BooleanValue.swift in Sources */,
+				8D75175A2A46A8DD004DAED7 /* TypeSystemDirectiveLocation.swift in Sources */,
+				8D62AF1B2A415AF000DF980C /* NonNullType.swift in Sources */,
+				8D3ED6FC2A3CC16600BC2DD9 /* ItemView.swift in Sources */,
+				8D87E3382A4E0B1D00130370 /* SwiftType.swift in Sources */,
+				8D62AF0B2A40D3DD00DF980C /* NullValue.swift in Sources */,
+				8D87E3362A4E072300130370 /* ExportView.swift in Sources */,
+				8D2C58DE2A36E4D80007698D /* DirectiveDefinition.swift in Sources */,
+				8D2C58D82A36E45B0007698D /* String.swift in Sources */,
+				8DADC1252A35C73D008A103A /* GraphQLViewerApp.swift in Sources */,
+				8D2C58E62A36E51C0007698D /* FieldDefinition.swift in Sources */,
+				8DDBB0F72A3F394E00DD455A /* GraphQLViewerToolbar.swift in Sources */,
+				8D62AF152A415ABB00DF980C /* TypeReferenceProtocol.swift in Sources */,
+				8D5BC3C92A4CAF9B006BD2CB /* Optional.swift in Sources */,
+				8D9F142C2A51636100018DD3 /* GraphQLDocument+.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D87E3332A4E02D600130370 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8D87E3322A4E02D600130370 /* SwiftLint */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8DADC12E2A35C73E008A103A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8DADC12F2A35C73E008A103A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		8DADC1312A35C73E008A103A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GraphQL Viewer/GraphQL_Viewer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"GraphQL Viewer/Preview Content\"";
+				DEVELOPMENT_TEAM = KW3F3CY4T9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GraphQL-Viewer-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.1.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.david-swift.GraphQL-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8DADC1322A35C73E008A103A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GraphQL Viewer/GraphQL_Viewer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"GraphQL Viewer/Preview Content\"";
+				DEVELOPMENT_TEAM = KW3F3CY4T9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GraphQL-Viewer-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.1.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.david-swift.GraphQL-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DADC11C2A35C73D008A103A /* Build configuration list for PBXProject "GraphQL Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DADC12E2A35C73E008A103A /* Debug */,
+				8DADC12F2A35C73E008A103A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DADC1302A35C73E008A103A /* Build configuration list for PBXNativeTarget "GraphQL Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DADC1312A35C73E008A103A /* Debug */,
+				8DADC1322A35C73E008A103A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D327CDD2A4868ED001BA3CC /* XCRemoteSwiftPackageReference "GraphQLLanguage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/niw/GraphQLLanguage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+		8D327CE02A486901001BA3CC /* XCRemoteSwiftPackageReference "PigeonApp-macOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/david-swift/PigeonApp-macOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.5;
+			};
+		};
+		8D87E3312A4E028300130370 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukepistrol/SwiftLintPlugin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.3;
+			};
+		};
+		8DA5F0512A48694F00682F12 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D327CDE2A4868EE001BA3CC /* GraphQLLanguage-Auto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D327CDD2A4868ED001BA3CC /* XCRemoteSwiftPackageReference "GraphQLLanguage" */;
+			productName = "GraphQLLanguage-Auto";
+		};
+		8D327CE12A486901001BA3CC /* PigeonApp */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D327CE02A486901001BA3CC /* XCRemoteSwiftPackageReference "PigeonApp-macOS" */;
+			productName = PigeonApp;
+		};
+		8D87E3322A4E02D600130370 /* SwiftLint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D87E3312A4E028300130370 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */;
+			productName = "plugin:SwiftLint";
+		};
+		8DA5F0522A48694F00682F12 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DA5F0512A48694F00682F12 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8DADC1192A35C73D008A103A /* Project object */;
+}

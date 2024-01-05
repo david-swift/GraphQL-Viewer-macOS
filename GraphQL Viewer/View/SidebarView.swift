@@ -19,7 +19,7 @@ struct SidebarView: View {
     var body: some View {
         List(selection: $viewModel.selection) {
             ForEach(Definition.allCases, id: \.hashValue) { definitionType in
-                Section(definitionType.name) {
+                Section(definitionType.name.localized) {
                     ForEach(
                         definitionType.getDefinitions(definitions: document.document.definitions),
                         id: \.name
